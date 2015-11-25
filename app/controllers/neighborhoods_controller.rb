@@ -1,5 +1,6 @@
 class NeighborhoodsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # ^ this is the DRY way to do it!
   before_action :authenticate_user!, only: [:show, :new, :create, :edit, :update, :destroy]
 
   def index
@@ -14,6 +15,7 @@ class NeighborhoodsController < ApplicationController
 
   def edit
     #@neighborhood = Neighborhood.find(params[:id])
+    #remove commented out code
   end
 
 

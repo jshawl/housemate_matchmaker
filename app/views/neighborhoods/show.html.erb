@@ -10,12 +10,13 @@
           <div class = "text-center search">
             <%= text_field_tag :search, params[:search] %>
             <%= submit_tag "Search", :name => nil %>
+	    <!-- HTML & erb here and your search implementation look great! -->
           </div>
           <% end %>
         </div>
       </div>
   </div>
-  <% @listings.in_groups_of(1, false).each do |group| #function to get listings to display on unique row - bootstrap %>
+  <% @listings.in_groups_of(1, false).each do |group| #function to get listings to display on unique row - bootstrap clever! %>
   <div class = "row">
     <% group.each do |listing| %>
     <div id = "listing-container" class = "col-lg-4 col-lg-offset-4 text-center">
